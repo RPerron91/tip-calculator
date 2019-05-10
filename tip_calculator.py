@@ -7,7 +7,7 @@ def getBill():
         #Change input to float and return Bill with no whitespace
         Bill = float(f"{Bill}\n")
         #Checks for non-infinite, positive value
-        if Bill >= 0 and Bill != float('inf'):
+        if Bill > 0 and Bill != float('inf'):
             print("Bill Total: $", Bill)
             return Bill
         else:
