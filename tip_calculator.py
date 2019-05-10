@@ -22,15 +22,20 @@ getBill()
 
 def numPeople():
     people = input("How many people are splitting the bill?")
-    #Exception handling for converting Bill from string to float
+    #Exception handling for converting people from str to int
     try:
-        #Change input to float and return
-        int(people)
-        print("Total People: ", people)
-        return people
+        #Change input to integer and return with no whitespace
+        people = int(f"{people}\n")
+        #Checks for positive value
+        if people > 0:
+            print("Total People:", people)
+            return people
+        else:
+            print("Please enter positive number of people")
+            numPeople()
     except ValueError:
-        print("Input valid number of people")
+        print("Input valid whole number of people")
         numPeople()
-    
+numPeople()   
 
 
