@@ -12,11 +12,11 @@ def getBill():
             return Bill
         else:
             print("Enter Positive, non-infinite Value for Bill")
-            getBill()
+            return getBill()
 
     except ValueError:
         print("Input valid number for Bill")
-        getBill()
+        return getBill()
 
 def numPeople():
     people = input("How many people are splitting the bill?")
@@ -30,10 +30,10 @@ def numPeople():
             return people
         else:
             print("Please enter positive number of people")
-            numPeople()
+            return numPeople()
     except ValueError:
         print("Input valid whole number of people")
-        numPeople()
+        return numPeople()
 
 def percentTip():
     #Set tip equal to user input
@@ -48,11 +48,11 @@ def percentTip():
             return Tip
         else:
             print("Enter Positive, Non-Infinite Value for Tip")
-            percentTip()
+            return percentTip()
 
     except ValueError:
         print("Input valid number for tip")
-        percentTip()
+        return percentTip()
 
 #Set Functions as Variables to be Passed into Last Function
 bill = getBill()
