@@ -59,10 +59,12 @@ bill = getBill()
 people = numPeople()
 tip = percentTip()
 
+#Function to calculate each person's tip, rounded to nearest cent
 def splitBill(bill, people, tip):
     tipAmount = bill*(tip/100)
     eachTip = round(tipAmount/people, 2)
     print(f"Each person should tip ${eachTip}")
     return eachTip
 
+#Call tip function using user input
 splitBill(bill, people, tip)
